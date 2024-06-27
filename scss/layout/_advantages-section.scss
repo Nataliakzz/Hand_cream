@@ -1,0 +1,135 @@
+.advantages-section {
+  &__title {
+    @media screen and (min-width: $--bp-mobile) {
+      font-size: 26px;
+      color: var(--color-brand-white);
+      position: relative;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: $--bp-tablet) {
+      font-size: 36px;
+      max-width: 500px;
+    }
+
+    &::after {
+      content: '';
+
+      @media screen and (min-width: $--bp-mobile) {
+        background-image: url(/images/premium.png);
+        display: block;
+        position: absolute;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 107px;
+        width: 107px;
+        right: -20%;
+        top: 10px;
+      }
+      @media screen and (min-width: $--bp-tablet) {
+        background-size: 74%;
+        right: -26%;
+        top: -2px;
+      }
+      @media screen and (min-width: $--bp-desktop) {
+        right: -30%;
+      }
+    }
+
+    &::before {
+      content: '';
+      @media screen and (min-width: $--bp-mobile) {
+        padding-bottom: 6px;
+        position: absolute;
+        left: 50%;
+        width: 100vw;
+        height: 100%;
+        background-color: var(--color-brand-dark-blue);
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+      @media screen and (min-width: $--bp-tablet) {
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  &__container {
+    padding: 0 100px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container-points {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+  }
+
+  &__points-item {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__points-item-icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  &__points-contain-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &__points-item-title {
+    text-transform: uppercase;
+    color: var(--color-brand-dark-blue);
+  }
+
+  &__container-plus-minus {
+    display: flex;
+  }
+
+  &__plus-title {
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-brand-white);
+    background-color: var(--color-brand-peach);
+    border-top-left-radius: 16px;
+    width: 100px;
+    align-items: center;
+  }
+
+  &__plus-icon {
+    height: 80px;
+    background-color: #fdefe7;
+    background-image: url(/images/check-mark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+  }
+
+  &__minus-title {
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-brand-white);
+    background-color: var(--color-brand-dark-blue);
+    border-top-right-radius: 16px;
+  }
+
+  &__minus-icon {
+    height: 80px;
+    background-color: #ece8e2;
+    background-image: url(/images/cross.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+  }
+}

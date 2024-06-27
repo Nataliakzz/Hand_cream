@@ -1,0 +1,38 @@
+.header {
+  padding: 12px;
+  background-color: var(--color-brand-dark-blue);
+  position: relative;
+  z-index: -1;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+  }
+
+  &__text-logo {
+    font-family: 'Berkshire Swash';
+    color: var(--color-brand-white);
+
+    @media screen and (min-width: $--bp-mobile) {
+      font-size: 28px;
+    }
+
+    @media screen and (min-width: $--bp-tablet) {
+      font-size: 32px;
+    }
+  }
+
+  &__picture-logo {
+    @media screen and (min-width: $--bp-mobile) {
+      width: 32px;
+      height: 35px;
+    }
+
+    @media screen and (min-width: $--bp-tablet) {
+      width: 42px;
+      height: 45px;
+    }
+  }
+}

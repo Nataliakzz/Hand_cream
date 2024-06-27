@@ -1,0 +1,121 @@
+.hero-section {
+  @media screen and (min-width: $--bp-mobile) {
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  @media screen and (min-width: $--bp-tablet) {
+    display: block;
+    margin: 0;
+    padding-left: 40px;
+    padding-top: 70px;
+  }
+  @media screen and (min-width: $--bp-desktop) {
+    padding-left: 150px;
+    padding-top: 100px;
+  }
+
+  &__title {
+    @media screen and (min-width: $--bp-mobile) {
+      max-width: 250px;
+      font-size: 36px;
+      margin: 0 auto;
+      padding-top: 16px;
+      color: var(--color-brand-dark-blue);
+    }
+
+    @media screen and (min-width: $--bp-tablet) {
+      max-width: 280px;
+      font-size: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media screen and (min-width: $--bp-desktop) {
+      max-width: 336px;
+      font-size: 50px;
+    }
+
+    &--accent {
+      color: var(--color-brand-peach);
+    }
+  }
+
+  &__picture-materials {
+    @media screen and (min-width: $--bp-mobile) {
+      position: static;
+      height: 320px;
+      width: 386px;
+    }
+
+    @media screen and (min-width: $--bp-tablet) {
+      position: absolute;
+      top: -6%;
+      right: 2%;
+      height: 370px;
+      width: 440px;
+      z-index: -1;
+    }
+
+    @media screen and (min-width: $--bp-desktop) {
+      top: -10%;
+      right: 1%;
+      height: 500px;
+      width: 550px;
+    }
+  }
+
+  &::before {
+    content: '';
+
+    @media screen and (min-width: $--bp-mobile) {
+      background-image: none;
+    }
+
+    @media screen and (min-width: $--bp-tablet) {
+      background-image: url('/images/heart_icon.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      right: 3%;
+      top: 80px;
+      display: block;
+      height: 64px;
+      width: 61px;
+      position: absolute;
+    }
+
+    @media screen and (min-width: $--bp-desktop) {
+      top: 110px;
+    }
+  }
+
+  &::after {
+    content: '';
+    background-image: url('/images/bright_hearts.png');
+    display: block;
+    height: 80px;
+    width: 77px;
+    position: absolute;
+    right: 3%;
+    top: 70px;
+
+    @media screen and (min-width: $--bp-mobile) {
+      right: 8px;
+      top: 25%;
+    }
+
+    @media screen and (min-width: $--bp-tablet) {
+      right: 420px;
+      top: 200px;
+    }
+
+    @media screen and (min-width: $--bp-desktop) {
+      right: 520px;
+      top: 280px;
+    }
+  }
+}
